@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
 
-import './style.css';
+import { PagesHomePage } from './pages/homepage';
+import { PagesAdminUsers } from './pages/admin/users';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +13,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>Start editing to see some magic happen :) dave</p>
+        <Router>
+          <Route exact path="/" component={PagesHomePage} />
+          <Route path="/pages/admin/users" component={PagesAdminUsers} />
+        </Router>
       </div>
     );
   }
