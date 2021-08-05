@@ -1,0 +1,353 @@
+body {
+  font-size: 13px !important;
+  font-weight: 400;
+  font-family: Poppins, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #181c32;
+  background: #eef0f8;
+}
+
+/* UTILITIES */
+.clickable {
+  cursor: pointer;
+}
+
+/* COLORS */
+.light-warning {
+  background-color: #e6ec93 !important;
+}
+.light-danger {
+  background-color: #ec9393 !important;
+}
+
+.intellicreo-side-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  overflow: hidden;
+  background-color: #1e1e2d;
+  box-shadow: 0 0 28px 0 rgb(82 63 105 / 5%);
+  padding: 0;
+}
+
+.intellicreo-side-menu-item {
+  color: #9899ac !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  flex: 0 0 100%;
+  outline: 0 !important;
+  width: 100%;
+  font-size: 14px !important;
+  text-decoration: none;
+}
+.intellicreo-side-menu-item-icon {
+  width: 2rem;
+  margin-right: 0.5rem;
+  font-size: 16px;
+}
+.intellicreo-side-menu-item-icon-expand {
+  float: right;
+}
+
+.intellicreo-side-submenu-item {
+  color: #9899ac;
+  padding-left: 45px !important;
+  padding-right: 25px !important;
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  flex: 0 0 100%;
+  outline: 0 !important;
+  width: 100%;
+  font-size: 14px !important;
+  text-decoration: none;
+  display: block;
+}
+.intellicreo-side-submenu-item-icon {
+  width: 2rem;
+  margin-right: 0.5rem;
+  font-size: 16px;
+}
+
+.intellicreo-side-submenu-item-active {
+  background-color: #d81b60;
+  color: #fff;
+}
+
+.intellicreo-side-menu-item:hover:not(.disabled):not(.active),
+.intellicreo-side-submenu-item:hover:not(.disabled):not(.active) {
+  transition: color 0.4s ease, background-color 0.4s ease;
+  background-color: #3d091c;
+  color: #fff;
+}
+
+.intellicreo-main {
+  padding-left: 0px !important;
+}
+
+.intellicreo-main-inner {
+  margin-top: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.intellicreo-header {
+  position: fixed;
+  height: 54px;
+  top: 0px;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+  z-index: 95;
+  -webkit-box-shadow: 0px 10px 30px 0px rgb(82 63 105 / 8%);
+  box-shadow: 0px 10px 30px 0px rgb(82 63 105 / 8%);
+  background-color: #ffffff;
+  border-top: 1px solid #ebedf3;
+  margin: 0;
+}
+
+/* TYPOGRAPHY */
+.text-muted {
+  color: #b5b5c3 !important;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-dark {
+  color: #181c32 !important;
+}
+.font-size-h2 {
+  font-size: 1.25rem !important;
+}
+.font-small {
+  font-size: 0.7rem !important;
+}
+.font-weight-bolder {
+  font-weight: 600 !important;
+}
+
+/* SYMBOL */
+.symbol {
+  display: inline-block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.42rem;
+}
+.symbol.symbol-40 .symbol-label {
+  width: 40px;
+  height: 40px;
+}
+.symbol.symbol-30 .symbol-label {
+  width: 30px;
+  height: 30px;
+}
+.symbol.symbol-light-white .symbol-label {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+/* PANELS */
+.intellicreo-card {
+  box-shadow: 0 0 20px 0 rgb(76 87 125 / 2%) !important;
+  border: 0 !important;
+}
+.intellicreo-card .card-header {
+  min-height: 70px !important;
+  padding: 0 2.25rem !important;
+  background-color: transparent !important;
+  padding-top: 1.5rem !important;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.intellicreo-card .card-title {
+  font-weight: 500;
+  font-size: 1.275rem;
+  color: #181c32;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+
+.intellicreo-card .card-body {
+  padding: 2rem 2.25rem !important;
+}
+
+.intellicreo-tile {
+  box-shadow: 0 0 20px 0 rgb(76 87 125 / 2%) !important;
+  border: 0 !important;
+}
+.intellicreo-tile .card-body {
+  padding: 1rem 1.25rem !important;
+}
+
+/* DATATABLES */
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.intellicreo-datatable {
+  border-collapse: collapse !important;
+}
+.dataTables_wrapper .bottom {
+  padding: 0.75rem 0.75rem !important;
+}
+.intellicreo-datatable td {
+  padding: 0.75rem 0.75rem !important;
+}
+.intellicreo-datatable th {
+  border-bottom: 0px !important;
+  background-color: #f3f6f9;
+  padding-left: 0.75rem !important;
+}
+
+.intellicreo-datatable thead tr {
+  color: #8a8a8e !important;
+}
+.intellicreo-datatable thead th:first-child {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+.intellicreo-datatable thead th:last-child {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+.intellicreo-datatable tbody tr {
+  border-bottom-width: 1px !important;
+  border-bottom-style: dashed !important;
+  border-bottom-color: #d2d2d2 !important;
+}
+.table.table-row-dashed tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #d2d2d2;
+}
+.table td:last-child,
+.table th:last-child,
+.table tr:last-child {
+  padding-right: 0 !important;
+}
+.table td:first-child,
+.table th:first-child,
+.table tr:first-child {
+  padding-left: 0 !important;
+}
+table.dataTable.no-footer {
+  border-bottom: 0px !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 0.475rem;
+  min-width: 2.5rem;
+  font-weight: 500;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #fff !important;
+  background: #009ef7 !important;
+  border-color: transparent;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #fff !important;
+  background: #79ccfb !important;
+  border-color: transparent;
+}
+.dtsb-button {
+  font-weight: 500 !important;
+  color: #009ef7 !important;
+  border-color: #f1faff !important;
+  background: #f1faff !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.475rem !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+.dtsb-button:hover {
+  color: #fff !important;
+  border-color: #009ef7 !important;
+  background: #009ef7 !important;
+}
+.dtsb-logicContainer {
+  border: none !important;
+  background: transparent !important;
+}
+.ticket-number {
+  border: 1px solid #4e8caf;
+  border-radius: 4px;
+  background-color: #61a1c5;
+  color: #fff;
+  text-align: center;
+}
+
+/* FORMS */
+select {
+  border-radius: 0.475rem !important;
+  border-color: #f5f8fa !important;
+  width: 100%;
+  display: block;
+  padding: 0.45rem 1rem 0.45rem 1rem;
+  background-color: #eff2f5 !important;
+  color: #5e6278 !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.intelliCreo-input {
+  border-radius: 0.475rem !important;
+  border: 1px solid #eff2f5 !important;
+  padding: 0.45rem 1rem 0.45rem 1rem;
+  background-color: #eff2f5 !important;
+  color: #5e6278 !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.intelliCreo-input:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block !important;
+  font-weight: 500 !important;
+  line-height: 0.5 !important;
+  color: #181c32;
+  vertical-align: middle !important;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.475rem !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+.btn-light-primary {
+  color: #009ef7 !important;
+  border-color: #f1faff !important;
+  background-color: #f1faff !important;
+}
+.btn-light-primary:hover {
+  color: #fff !important;
+  border-color: #009ef7 !important;
+  background-color: #009ef7 !important;
+}
+.btn:focus {
+  box-shadow: none;
+}

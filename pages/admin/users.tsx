@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { DefaultLayout } from '../../pages/layouts/defaultLayout';
+
 import { appParams } from '../../app-params';
 
 export class PagesAdminUsers extends Component {
@@ -28,11 +30,15 @@ export class PagesAdminUsers extends Component {
 
   render() {
     if (this.displayMode == 'list') {
-      return this.state.usersList.map(user => (
-        <div onClick={() => this.userClicked(user.id)}>
-          User:{user.first_name + ' ' + user.last_name}
-        </div>
-      ));
+      return (
+        <DefaultLayout>
+          {this.state.usersList.map(user => (
+            <div onClick={() => this.userClicked(user.id)}>
+              User:{user.first_name + ' ' + user.last_name}
+            </div>
+          ))}
+        </DefaultLayout>
+      );
     }
     if (this.displayMode == 'edit') {
       return <span>this is edit for userId: {this.state.userEditId}</span>;

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { render } from 'react-dom';
 
 import { PagesHomePage } from './pages/homepage';
 import { PagesAdminUsers } from './pages/admin/users';
+import './styles.css';
+
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 class App extends Component {
   constructor(props) {
@@ -13,15 +16,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <BrowserRouter basename={baseUrl}>
           <Route exact path="/" component={PagesHomePage} />
           <Route path="/pages/admin/users" component={PagesAdminUsers} />
-        </Router>
+        </BrowserRouter>
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
-
-// https://mockapi.io/projects/610c3fc166dd8f0017b76d42
